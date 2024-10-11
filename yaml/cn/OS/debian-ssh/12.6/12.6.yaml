@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: debian-ssh
   config:
-    image: ghcr.io/labring-actions/devbox/debian-ssh-12.6:40aadc
+    image: ghcr.io/labring-actions/devbox/debian-ssh-12.6:4a25ede
     ports:
       - containerPort: 22
         name: devbox-ssh-port
