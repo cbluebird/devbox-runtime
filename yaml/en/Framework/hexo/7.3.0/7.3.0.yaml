@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: hexo
   config:
-    image: ghcr.io/labring-actions/devbox/hexo-7.3.0:7a4717
+    image: ghcr.io/labring-actions/devbox/hexo-7.3.0:773dea
     ports:
       - containerPort: 22
         name: devbox-ssh-port
@@ -15,13 +15,13 @@ spec:
       - port: 4000
         name: devbox-app-port
         protocol: TCP
-    user: sealos
-    workingDir: /home/sealos/project
+    user: devbox
+    workingDir: /home/devbox/project
     releaseCommand:
       - /bin/bash
       - -c
     releaseArgs:
-      - /home/sealos/project/entrypoint.sh
+      - /home/devbox/project/entrypoint.sh
   description: hexo 7.3.0
   version: "7.3.0"
 ---
