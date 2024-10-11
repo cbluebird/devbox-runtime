@@ -30,7 +30,7 @@ RUN sudo chown -R devbox:devbox /home/devbox/project && \
     sudo chmod -R 777 /home/devbox/project
 
 USER root
- 
+
 ENTRYPOINT ["/usr/bin/dumb-init", "--"]
 CMD ["sudo", "-E", "/usr/start/startup.sh"]
 
