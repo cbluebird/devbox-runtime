@@ -1,4 +1,4 @@
-FROM ghcr.io/labring-actions/devbox/debian-ssh-12.6:d9829b
+FROM ghcr.io/labring-actions/devbox/debian-ssh-12.6:4a25ed
 RUN cd /home/devbox/project && \
 rm -rf ./*
 
