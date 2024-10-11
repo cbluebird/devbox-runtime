@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: next.js
   config:
-    image: ghcr.io/labring-actions/devbox/next.js-14.2.5:8b4e92e
+    image: ghcr.io/labring-actions/devbox/next.js-14.2.5:58bcb57
     ports:
       - containerPort: 22
         name: devbox-ssh-port
@@ -15,13 +15,13 @@ spec:
       - port: 3000
         name: devbox-app-port
         protocol: TCP
-    user: sealos
-    workingDir: /home/sealos/project
+    user: devbox
+    workingDir: /home/devbox/project
     releaseCommand:
       - /bin/bash
       - -c
     releaseArgs:
-      - /home/sealos/project/entrypoint.sh
+      - /home/devbox/project/entrypoint.sh
   description: next.js 14.2.5
   version: "14.2.5"
 ---
