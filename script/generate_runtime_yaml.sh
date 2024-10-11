@@ -55,13 +55,13 @@ spec:
       - port: ${PORT_MAP[$runtime]}
         name: devbox-app-port
         protocol: TCP
-    user: sealos
-    workingDir: /home/sealos/project
+    user: devbox
+    workingDir: /home/devbox/project
     releaseCommand:
       - /bin/bash
       - -c
     releaseArgs:
-      - /home/sealos/project/entrypoint.sh
+      - /home/devbox/project/entrypoint.sh
   description: $runtime $parent_dir
   version: "$parent_dir"
 ---
