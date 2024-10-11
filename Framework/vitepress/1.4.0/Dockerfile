@@ -13,4 +13,5 @@ RUN cd /home/devbox/project && \
 npm add -D vitepress && \
 npm run-script docs:build
  
+USER root
 RUN mkdir /home/devbox/.devbox

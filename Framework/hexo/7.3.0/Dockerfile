@@ -13,4 +13,6 @@ hexo init /home/devbox/project && \
 cd /home/devbox/project && \
 npm install
 COPY /Framework/hexo/7.3.0/entrypoint.sh /home/devbox/project/entrypoint.sh
+
+USER root
 RUN mkdir /home/devbox/.devbox
