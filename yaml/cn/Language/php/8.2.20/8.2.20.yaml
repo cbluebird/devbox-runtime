@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: php
   config:
-    image: ghcr.io/labring-actions/devbox/php-8.2.20:1697bc
+    image: ghcr.io/labring-actions/devbox/php-8.2.20:255ae9
     ports:
       - containerPort: 22
         name: devbox-ssh-port
@@ -15,13 +15,13 @@ spec:
       - port: 8080
         name: devbox-app-port
         protocol: TCP
-    user: sealos
-    workingDir: /home/sealos/project
+    user: devbox
+    workingDir: /home/devbox/project
     releaseCommand:
       - /bin/bash
       - -c
     releaseArgs:
-      - /home/sealos/project/entrypoint.sh
+      - /home/devbox/project/entrypoint.sh
   description: php 8.2.20
   version: "8.2.20"
 ---

@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: python
   config:
-    image: ghcr.io/labring-actions/devbox/python-3.11:1697bc
+    image: ghcr.io/labring-actions/devbox/python-3.11:255ae9d
     ports:
       - containerPort: 22
         name: devbox-ssh-port
@@ -15,13 +15,13 @@ spec:
       - port: 8080
         name: devbox-app-port
         protocol: TCP
-    user: sealos
-    workingDir: /home/sealos/project
+    user: devbox
+    workingDir: /home/devbox/project
     releaseCommand:
       - /bin/bash
       - -c
     releaseArgs:
-      - /home/sealos/project/entrypoint.sh
+      - /home/devbox/project/entrypoint.sh
   description: python 3.11
   version: "3.11"
 ---
