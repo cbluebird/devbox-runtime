@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: rocket
   config:
-    image: ghcr.io/labring-actions/devbox/rocket-0.5.1:56aeda
+    image: ghcr.io/labring-actions/devbox/rocket-0.5.1:93bbb5b
     ports:
       - containerPort: 22
         name: devbox-ssh-port
@@ -15,13 +15,13 @@ spec:
       - port: 8000
         name: devbox-app-port
         protocol: TCP
-    user: sealos
-    workingDir: /home/sealos/project
+    user: devbox
+    workingDir: /home/devbox/project
     releaseCommand:
       - /bin/bash
       - -c
     releaseArgs:
-      - /home/sealos/project/entrypoint.sh
+      - /home/devbox/project/entrypoint.sh
   description: rocket 0.5.1
   version: "0.5.1"
 ---
