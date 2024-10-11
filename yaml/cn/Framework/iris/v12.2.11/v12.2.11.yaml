@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: iris
   config:
-    image: ghcr.io/labring-actions/devbox/iris-v12.2.11:d6d0c33
+    image: ghcr.io/labring-actions/devbox/iris-v12.2.11:f243a4
     ports:
       - containerPort: 22
         name: devbox-ssh-port
