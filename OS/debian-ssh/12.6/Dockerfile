@@ -1,5 +1,5 @@
 FROM ghcr.io/labring-actions/devbox/debian:ce4733
-
+ 
 COPY /script/startup.sh /usr/start/startup.sh
 
 RUN chmod +x /usr/start/startup.sh && \
