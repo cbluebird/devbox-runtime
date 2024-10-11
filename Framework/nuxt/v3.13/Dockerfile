@@ -1,17 +1,16 @@
-FROM ghcr.io/labring-actions/devbox/node.js-20:5c2eec
-
-RUN cd /home/sealos/project && \
+FROM ghcr.io/labring-actions/devbox/node.js-20:255ae9
+RUN cd /home/devbox/project && \
 rm -rf ./*
 
-COPY /Framework/nuxt/v3.13/project /home/sealos/project
-RUN chown -R sealos:sealos /home/sealos/project && \
-chmod -R u+rw /home/sealos/project  && \
-chmod -R +x /home/sealos/project/entrypoint.sh
+COPY /Framework/nuxt/v3.13/project /home/devbox/project
+RUN chown -R devbox:devbox /home/devbox/project && \
+chmod -R u+rw /home/devbox/project  && \
+chmod -R +x /home/devbox/project/entrypoint.sh
 
-USER sealos
-RUN cd /home/sealos/project && \
+USER devbox
+RUN cd /home/devbox/project && \
 npm config seinstat fetch-retry-maxtimeout 4000000 && \
 npm install && \
 pnpm run build
 
-RUN mkdir /home/sealos/.sealos
+RUN mkdir /home/devbox/.devbox
