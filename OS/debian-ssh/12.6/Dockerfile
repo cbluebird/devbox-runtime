@@ -24,7 +24,7 @@ RUN chmod +x /usr/start/startup.sh && \
     chown -R devbox:devbox /home/devbox/.ssh && \
     chmod -R 770 /home/devbox/.ssh 
  
-USER sealos
+USER devbox
 COPY /OS/debian-ssh/project /home/devbox/project
 RUN sudo chown -R devbox:devbox /home/devbox/project && \
     sudo chmod -R 777 /home/devbox/project
