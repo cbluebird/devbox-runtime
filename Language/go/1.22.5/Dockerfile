@@ -1,9 +1,9 @@
 FROM ghcr.io/labring-actions/devbox/debian-ssh-12.6:176b7d
 
-RUN cd /home/sealos/project && \
+RUN cd /home/devbox/project && \
 rm -rf ./*
 
-COPY /Language/go/project /home/sealos/project
+COPY /Language/go/project /home/devbox/project
 
 RUN curl -O https://dl.google.com/go/go1.22.5.linux-amd64.tar.gz && \
     tar -xvf go1.22.5.linux-amd64.tar.gz && \
@@ -15,10 +15,10 @@ RUN curl -O https://dl.google.com/go/go1.22.5.linux-amd64.tar.gz && \
     echo 'export GOPATH=/go' >> /root/.bashrc && \
     echo 'export PATH=$PATH:/usr/local/go/bin:/go/bin' >> /root/.bashrc && \
     chmod -R 777 /go && \
-    chown -R sealos:sealos /home/sealos/project && \
-    chmod -R u+rw /home/sealos/project && \
-    chmod -R +x /home/sealos/project/entrypoint.sh
+    chown -R devbox:devbox /home/devbox/project && \
+    chmod -R u+rw /home/devbox/project && \
+    chmod -R +x /home/devbox/project/entrypoint.sh
 
 ENV GOPATH=/go
 ENV PATH=$PATH:/usr/local/go/bin:/go/bin
-RUN mkdir /root/.sealos
+RUN mkdir /root/.devbox
