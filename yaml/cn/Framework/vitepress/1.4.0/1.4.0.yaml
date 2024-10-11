@@ -6,7 +6,7 @@ metadata:
 spec:
   classRef: vitepress
   config:
-    image: ghcr.io/labring-actions/devbox/vitepress-1.4.0:58bcb57
+    image: ghcr.io/labring-actions/devbox/vitepress-1.4.0:a512622
     ports:
       - containerPort: 22
         name: devbox-ssh-port
