@@ -89,11 +89,11 @@ for i in "${!DIFF_OUTPUT_ARRAY[@]}"; do
 
   # Define paths for YAML files and the image names
   YAML_PATH="${DOCKERFILE_PATH%/*}"
+  parent_path=$(dirname "$YAML_PATH")
   EN_IMAGE_NAME="${ADDR[1]}-$PARENT_DIR:$TAG"
   CN_IMAGE_NAME="${ADDR[1]}-$PARENT_DIR:$CN_TAG"
 
-  # Check if update_cn_dockerfile.sh exists to decide CN image name
-  if [ -f "$(dirname "$DOCKERFILE_PATH")/update_cn_dockerfile.sh" ]; then
+  if [ -f "$parent_path/update_cn_dockerfile.sh" ]; then
     CN_IMAGE_NAME="${ADDR[1]}-$PARENT_DIR:$CN_TAG"
   else
     CN_IMAGE_NAME="${ADDR[1]}-$PARENT_DIR:$TAG"
